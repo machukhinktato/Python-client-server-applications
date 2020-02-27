@@ -38,23 +38,23 @@ os_code_list, os_type_list. В этой же функции создать гл�
 """
 import csv
 import re
-import chardet
+# import chardet
 
 HEADER = ["Изготовитель системы", "Название ОС", "Код продукта", "Тип системы"]
 FILES = ['info_1.txt', 'info_2.txt', 'info_3.txt']
 
 
-def get_data():
-    """function creating dict for write"""
+def task_1():
+    """function creating dict for write and get data"""
     os_prod_list = list()
     os_name_list = list()
     os_code_list = list()
     os_type_list = list()
     main_data = [HEADER]
-    reg_ex = [r'Изготовитель системы:\s+', r'Название ОС:\s+',
-              r'Код продукта:\s+', r'Тип системы:\s+']
-    for eggs_file in FILES:
-        with open(eggs_file, 'rb') as tmp_f:
+    looking_for = [r'Изготовитель системы:\s', r'Название ОС:\s',
+                   r'Код продукта:\s', r'Тип системы:\s']
+    for file in FILES:
+        with open(file, 'rb') as tmp_f:
             for line in tmp_f.readlines():
                 # с поиском кодировки не заполняется файл
                 # encoding = chardet.detect(line)
@@ -64,20 +64,20 @@ def get_data():
                 # при тестировании не забыть импортировать chardet
                 line = bytes.decode(line, encoding='cp1251'). \
                     encode('utf-8').decode('utf-8')
-                for counter, reg in enumerate(reg_ex):
-                    eggs_str = re.search(reg, line)
-                    if eggs_str is not None and counter == 0:
-                        eggs_str = re.split(r'\W{2,}', line)
-                        os_prod_list.append(eggs_str[1])
-                    if eggs_str is not None and counter == 1:
-                        eggs_str = re.split(r'\W{2,}', line)
-                        os_name_list.append(eggs_str[1])
-                    if eggs_str is not None and counter == 2:
-                        eggs_str = re.split(r'\W{2,}', line)
-                        os_code_list.append(eggs_str[1])
-                    if eggs_str is not None and counter == 3:
-                        eggs_str = re.split(r'\W{2,}', line)
-                        os_type_list.append(eggs_str[1])
+                for counter, reg_ex in enumerate(looking_for):
+                    found_string = re.search(reg_ex, line)
+                    if found_string is not None and counter == 0:
+                        found_string = re.split(r'\W{2,}', line)
+                        os_prod_list.append(found_string[1])
+                    if found_string is not None and counter == 1:
+                        found_string = re.split(r'\W{2,}', line)
+                        os_name_list.append(found_string[1])
+                    if found_string is not None and counter == 2:
+                        found_string = re.split(r'\W{2,}', line)
+                        os_code_list.append(found_string[1])
+                    if found_string is not None and counter == 3:
+                        found_string = re.split(r'\W{2,}', line)
+                        os_type_list.append(found_string[1])
     for counter in range(len(os_prod_list)):
         tmp_list = [os_prod_list[counter], os_name_list[counter],
                     os_code_list[counter], os_type_list[counter]]
@@ -85,13 +85,13 @@ def get_data():
     return main_data
 
 
-def write_to_csv(file_obj):
-    """Function to save dict in file"""
+def task_1_launcher(file_obj):
+    """Function to save dict in file csv format"""
     with open(file_obj, 'w', encoding='utf-8') as f_writer:
         f_writer = csv.writer(f_writer, quoting=csv.QUOTE_ALL)
-        for row in get_data():
+        for row in task_1():
             f_writer.writerow(row)
 
 
-write_to_csv('main_data.csv')
+task_1_launcher('main_data.csv')
 print('Программа выполнена')

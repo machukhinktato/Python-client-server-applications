@@ -20,20 +20,32 @@ ASCII(например, €);
 """
 import yaml
 
-items_list = ['mouse',
-              'keyboard',
-              'monitor',
-              'computer']
-price_dict = {
-    'mouse': '10€ - 500€',
-    'keyboard': '50€ - 700€',
-    'monitor': '150€ - 1000€',
-    'computer': '300€ - 10000€'
+
+def task_3():
+    """function to complete task 3, it helps to fill yaml file with
+    useful data"""
+    items_list = ['mouse',
+                  'keyboard',
+                  'monitor',
+                  'computer']
+    price_dict = {
+        'mouse': '10€ - 500€',
+        'keyboard': '50€ - 700€',
+        'monitor': '150€ - 1000€',
+        'computer': '300€ - 10000€'
     }
-quantity_var = 5
-data_to_yaml = {'items': items_list, 'items_price': price_dict, 'items_quantity': quantity_var}
-with open('data_write.yaml', 'w', encoding='utf-8') as f_n:
-    yaml.dump(data_to_yaml, f_n, default_flow_style=False, allow_unicode=True)
-with open('data_write.yaml', 'r', encoding='utf-8') as f_n:
-    tmp = yaml.load(f_n, Loader=yaml.SafeLoader)
-    print(tmp)
+    quantity_var = 5
+    data_to_yaml = {
+        'items': items_list,
+        'items_price': price_dict,
+        'items_quantity': quantity_var
+    }
+    with open('data.yaml', 'w', encoding='utf-8') as f_n:
+        yaml.dump(data_to_yaml, f_n, default_flow_style=False,
+                  allow_unicode=True)
+    with open('data.yaml', 'r', encoding='utf-8') as f_n:
+        tmp = yaml.load(f_n, Loader=yaml.SafeLoader)
+        print(tmp)
+
+
+task_3()

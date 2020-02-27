@@ -41,7 +41,7 @@
 import json
 
 
-def write_orders_to_json(item, quantity, price, buyer, date):
+def task_2(item, quantity, price, buyer, date):
     """ function to write orders in json file"""
     with open('orders.json', 'r', encoding='utf-8') as forming:
         data = json.load(forming)
@@ -62,6 +62,7 @@ def write_orders_to_json(item, quantity, price, buyer, date):
         print(record_output.read())
 
 
-write_orders_to_json('macbook', '1', '1000$', 'Tarabrin', '23.10.2020')
-write_orders_to_json('макбук', '2', '2000$', 'Тарабрин', '23.10.2020')
-write_orders_to_json('самый крутой и большой комп', '1', '1000$', 'Котова', '23.10.2020')
+task_2('macbook', '1', '1000$', 'Tarabrin', '23.10.2020')
+task_2('макбук', '2', '2000$', 'Тарабрин', '23.10.2020')
+task_2('самый крутой и большой комп', '1', '1000$', 'Котова',
+       '23.10.2020')
