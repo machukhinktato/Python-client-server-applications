@@ -1,0 +1,28 @@
+2020-03-06 23:11:25,291 CRITICAL config_log_client_side.py Критическая ошибка
+2020-03-06 23:11:25,291 ERROR config_log_client_side.py Ошибка
+2020-03-06 23:11:25,291 INFO config_log_client_side.py Отладочная информация
+2020-03-06 23:11:25,291 DEBUG config_log_client_side.py Информационное сообщение
+2020-03-07 02:13:41,734 INFO client_side.py client application was launched with parameters server address: 127.0.0.1 port: 7777
+2020-03-07 02:13:41,735 DEBUG client_side.py fromed presence message for user Anonymous
+2020-03-07 02:13:41,736 DEBUG client_side.py Analyzing server request: {'response': 200} 
+2020-03-07 02:13:41,737 INFO client_side.py Received response from server 200 : OK
+2020-03-07 02:33:06,899 INFO client_side.py client application was launched with parameters (server address: 127.0.0.1 port: 7777)
+2020-03-07 02:33:06,900 DEBUG client_side.py formed presence message from user Anonymous
+2020-03-07 02:33:06,900 DEBUG client_side.py Analyzing server request: {'response': 200} 
+2020-03-07 02:33:06,901 INFO client_side.py received response from server 200 : OK
+2020-03-07 02:33:22,830 INFO client_side.py client application was launched with parameters (server address: 127.0.0.1 port: 7777)
+2020-03-07 02:33:22,831 DEBUG client_side.py formed presence message from user Anonymous
+2020-03-07 02:33:22,832 DEBUG client_side.py Analyzing server request: {'response': 200} 
+2020-03-07 02:33:22,832 INFO client_side.py received response from server 200 : OK
+2020-03-07 02:36:36,267 INFO client_side.py client application was launched with parameters (server address: 127.0.0.1 port: 7777)
+2020-03-07 02:36:36,268 DEBUG client_side.py formed presence message from user Anonymous
+2020-03-07 02:36:36,271 DEBUG client_side.py Analyzing server request: {'response': 200} 
+2020-03-07 02:36:36,271 INFO client_side.py received response from server 200 : OK
+2020-03-07 02:49:31,609 INFO client_side.py client application was launched with parameters (server address: 127.0.0.1 port: 7777)
+2020-03-07 02:49:31,611 DEBUG client_side.py formed presence message from user Anonymous
+2020-03-07 02:49:31,612 DEBUG client_side.py Analyzing server request: {'response': 200} 
+2020-03-07 02:49:31,612 INFO client_side.py received response from server 200 : OK
+2020-03-08 14:04:42,162 INFO client_side.py client application was launched with parameters: server address: 127.0.0.1 port: 7777
+2020-03-08 14:04:42,164 DEBUG client_side.py formed presence message from user Anonymous
+2020-03-08 14:04:42,166 DEBUG client_side.py Analyzing server request: {'response': 200} 
+2020-03-08 14:04:42,166 INFO client_side.py received response from server 200 : OK
