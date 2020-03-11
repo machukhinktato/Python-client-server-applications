@@ -1,0 +1,6 @@
+2020-03-08 14:04:39,298 INFO server_side.py server launched, port to connect: 7777 connection from address:  (If address not defined, connection will be available without it)
+2020-03-08 14:04:42,165 INFO server_side.py connection with ('127.0.0.1', 49698) stabilized
+2020-03-08 14:04:42,165 DEBUG server_side.py message received: {'action': 'presence', 'time': 1583665482.164661, 'user': {'account_name': 'Anonymous'}}
+2020-03-08 14:04:42,166 DEBUG server_side.py analyze of client message {'action': 'presence', 'time': 1583665482.164661, 'user': {'account_name': 'Anonymous'}}
+2020-03-08 14:04:42,166 INFO server_side.py response is ready to sent: {'response': 200}
+2020-03-08 14:04:42,166 DEBUG server_side.py connection with client ('127.0.0.1', 49698) will be closed
